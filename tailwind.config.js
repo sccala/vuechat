@@ -1,14 +1,49 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
+    mode: 'jit',
     purge: ['./public/index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     darkMode: 'class',
     theme: {
-        container: {
-            center: true,
+        extend: {
+            fontFamily: {
+                body: ['Cabin', 'sans-serif'],
+                heading: ['Cabin', 'sans-serif'],
+            },
+            backgroundColor: {
+                primary: 'var(--color-bg-primary)',
+                secondary: 'var(--color-bg-secondary)',
+            },
+            textColor: {
+                primary: 'var(--color-text-primary)',
+                secondary: 'var(--color-text-secondary)',
+            },
+            container: {
+                center: true,
+                padding: {
+                    default: '0.5rem',
+                    sm: '1rem',
+                    lg: '4rem',
+                    xl: '5rem',
+                },
+            },
         },
-        extend: {},
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            gray: colors.coolGray,
+            blue: colors.sky,
+            red: colors.rose,
+            pink: colors.fuchsia,
+            indigo: colors.indigo,
+            white: colors.white,
+        },
     },
     variants: {
-        extend: {},
+        extend: {
+            backgroundImage: ['dark'],
+            dropShadow: ['hover', 'focus'],
+        },
     },
     plugins: [],
 }

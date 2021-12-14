@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+    --color-bg-primary: #29374b;
+    --color-bg-secondary: #3f5169;
+    --color-bg-tertiary: #f3f3f3;
+    --color-bg-accent: #6461af;
+    --color-text-primary: #f7fafc;
+    --color-text-secondary: #e2e8f0;
+    --color-text-accent: #a5b4fc;
+}
+
+.light {
+    --color-bg-primary: #a5a1a1;
+    --color-bg-secondary: #f3f2f2;
+    --color-bg-accent: #9692df;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #9ca3af;
+    --color-text-accent: #4f46e5;
+}
+
+* {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+/* ::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-600;
+    @apply shadow-lg;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-300;
+    @apply rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-200;
+} */

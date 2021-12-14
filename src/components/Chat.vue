@@ -1,5 +1,5 @@
 <template>
-    <div class="container-sm mt-20">
+    <div class="container max-w-xl mt-20">
         <div class="mx-5">
             <Message
                 v-for="{ id, text, userPhotoURL, userName, userId } in messages"
@@ -11,11 +11,21 @@
             </Message>
         </div>
     </div>
-    <div ref="bottom" class="mt-20" />
-    <div class="bottom">
-        <div class="container-sm">
-            <form v-if="isLogin" @submit.prevent="send" action="">
-                <input v-model="message" placeholder="Message" required />
+    <div ref="bottom" class="mt-20 " />
+    <div class="fixed bottom-0  bg-gray-900 shadow-lg w-full">
+        <div class="container max-w-xl">
+            <form
+                class="w-full flex justify-between"
+                v-if="isLogin"
+                @submit.prevent="send"
+                action=""
+            >
+                <input
+                    v-model="message"
+                    placeholder="Message"
+                    class="flex-grow m-7 p-4  mr-1 rounded-lg border-none bg-gray-700 text-white"
+                    required
+                />
                 <button type="submit">
                     <SendIcon />
                 </button>
@@ -23,6 +33,8 @@
         </div>
     </div>
 </template>
+
+
 
 <script>
 import { ref, watch, nextTick } from 'vue'
