@@ -3,6 +3,7 @@
         <span class="ml-11 text-xs text-primary" v-if="!sender">{{
             name
         }}</span>
+        <span class="ml-11 text-xs text-primary">{{ createdAt }}</span>
         <div class="flex" :class="sender ? 'flex-row-reverse' : ''">
             <Avatar class="mt-1" :src="photoUrl" />
             <div
@@ -25,6 +26,7 @@ export default {
         name: { type: String, default: '' },
         photoUrl: { type: String, default: '' },
         sender: { type: Boolean, default: false },
+        createdAt: { type: String, default: '' },
     },
 }
 </script>

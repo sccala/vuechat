@@ -11,7 +11,7 @@
             </Message>
         </div>
     </div>
-    <div ref="bottom" class="mt-20" />
+    <div ref="bottom" class="mt-20 mb-60" />
     <div class="fixed bottom-0 bg-tertiary shadow-lg w-full">
         <div class="container max-w-xl">
             <form
