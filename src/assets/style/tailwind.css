@@ -23,61 +23,33 @@
 @tailwind utilities;
 
 .dark {
-    --color-bg-primary: #29374b;
-    --color-bg-secondary: #3f5169;
-    --color-bg-tertiary: #f3f3f3;
-    --color-bg-accent: #6461af;
-    --color-text-primary: #f7fafc;
-    --color-text-secondary: #e2e8f0;
-    --color-text-accent: #a5b4fc;
+    --color-bg-primary: #3F3E42;
+    --color-bg-secondary: #302f31;
+    --color-bg-tertiary: #202022;
+    --color-bg-accent: #3FA037;
+    --color-text-primary: #E8E7D5;
+    --color-text-secondary: #C1BEBC;
+    --color-text-accent: #4DB33D;
 }
 
 .light {
-    --color-bg-primary: #a5a1a1;
-    --color-bg-secondary: #f3f2f2;
-    --color-bg-accent: #9692df;
-    --color-text-primary: #1f2937;
-    --color-text-secondary: #9ca3af;
-    --color-text-accent: #4f46e5;
+    --color-bg-primary: #E8E7D5;
+    --color-bg-secondary: #C1BEBC;
+    --color-bg-tertiary: #3F3E42;
+    --color-bg-accent: #4DB33D;
+    --color-text-primary: #3F3E42;
+    --color-text-secondary: #C1BEBC;
+    --color-text-accent: #3FA037;
 }
 
 * {
     font-family: 'Source Sans 3', sans-serif;
 }
 
+:root {
+    background-color: var(--color-bg-primary);
+}
+
 .switch-checkbox {
     display: none;
-}
-
-.switch-label {
-    align-items: center;
-    background: var(--bg-primary-color);
-    border: calc(var(--element-size) * 0.025) solid var(--accent-color);
-    border-radius: var(--element-size);
-    cursor: pointer;
-    display: flex;
-    font-size: calc(var(--element-size) * 0.3);
-    height: calc(var(--element-size) * 0.35);
-    position: relative;
-    padding: calc(var(--element-size) * 0.1);
-    transition: background 0.5s ease;
-    justify-content: space-between;
-    width: var(--element-size);
-    z-index: 1;
-}
-
-.switch-toggle {
-    position: absolute;
-    background-color: var(--background-color-primary);
-    border-radius: 50%;
-    top: calc(var(--element-size) * 0.07);
-    left: calc(var(--element-size) * 0.07);
-    height: calc(var(--element-size) * 0.4);
-    width: calc(var(--element-size) * 0.4);
-    transform: translateX(0);
-    transition: transform 0.3s ease, background-color 0.5s ease;
-}
-
-.switch-toggle-checked {
-    transform: translateX(calc(var(--element-size) * 0.6)) !important;
 }

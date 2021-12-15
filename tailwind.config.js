@@ -12,10 +12,14 @@ module.exports = {
             backgroundColor: {
                 primary: 'var(--color-bg-primary)',
                 secondary: 'var(--color-bg-secondary)',
+                accent: 'var(--color-bg-accent)',
+                tertiary: 'var(--color-bg-tertiary)',
             },
             textColor: {
                 primary: 'var(--color-text-primary)',
                 secondary: 'var(--color-text-secondary)',
+                accent: 'var(--color-text-accent)',
+                tertiary: 'var(--color-text-tertiary)',
             },
             container: {
                 center: true,

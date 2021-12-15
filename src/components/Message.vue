@@ -1,13 +1,15 @@
 <template>
     <div class="my-2 w-full">
-        <span class="ml-11 text-xs text-gray-500" v-if="!sender">{{
+        <span class="ml-11 text-xs text-primary" v-if="!sender">{{
             name
         }}</span>
         <div class="flex" :class="sender ? 'flex-row-reverse' : ''">
             <Avatar class="mt-1" :src="photoUrl" />
             <div
-                class="mx-2 p-4 rounded-lg shadow-sm text-white w-3/4"
-                :class="sender ? 'bg-primary' : 'bg-gray-700 '"
+                class="mx-2 p-4 rounded-lg shadow-md w-3/4 text-primary"
+                :class="
+                    sender ? 'bg-gray-100 dark:bg-gray-500 ' : 'bg-secondary '
+                "
             >
                 <slot />
             </div>

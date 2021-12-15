@@ -1,4 +1,4 @@
-<template>
+<template class="bg-primary">
     <div class="container max-w-xl mt-20">
         <div class="mx-5">
             <Message
@@ -12,7 +12,7 @@
         </div>
     </div>
     <div ref="bottom" class="mt-20" />
-    <div class="fixed bottom-0 bg-gray-900 shadow-lg w-full">
+    <div class="fixed bottom-0 bg-tertiary shadow-lg w-full">
         <div class="container max-w-xl">
             <form
                 class="w-full flex justify-between"
@@ -22,14 +22,20 @@
             >
                 <input
                     v-model="message"
-                    placeholder="Message"
-                    class="flex-grow m-7 p-4 mr-1 rounded-lg border-none bg-gray-700 text-white"
+                    placeholder="Enter your message"
+                    class="flex-grow m-7 p-4 mr-1 rounded-lg border-none bg-secondary text-primary"
                     required
                 />
                 <button type="submit">
                     <SendIcon />
                 </button>
             </form>
+            <p class="text-secondary text-center pt-4 pb-8">
+                Vue Realtime Chat by
+                <a href="https://github.com/sccala" class="text-gray-300"
+                    >Chase Chung</a
+                >
+            </p>
         </div>
     </div>
 </template>
