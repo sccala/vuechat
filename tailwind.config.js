@@ -36,6 +36,7 @@ module.exports = {
             current: 'currentColor',
             gray: colors.coolGray,
             blue: colors.sky,
+            green: colors.green,
             red: colors.rose,
             pink: colors.fuchsia,
             indigo: colors.indigo,

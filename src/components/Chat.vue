@@ -2,11 +2,19 @@
     <div class="container max-w-xl mt-20">
         <div class="mx-5">
             <Message
-                v-for="{ id, text, userPhotoURL, userName, userId } in messages"
+                v-for="{
+                    id,
+                    text,
+                    userPhotoURL,
+                    userName,
+                    userId,
+                    createdAt,
+                } in messages"
                 :key="id"
                 :name="userName"
                 :photo-url="userPhotoURL"
                 :sender="userId === user?.uid"
+                :createdAt="createdAt"
                 >{{ text }}
             </Message>
         </div>
