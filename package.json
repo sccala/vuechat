@@ -12,7 +12,8 @@
         "core-js": "^3.6.5",
         "firebase": "^7.13.1",
         "firebase-tools": "^9.1.0",
-        "vue": "^3.0.0"
+        "vue": "^3.0.0",
+        "vue-hooks": "^0.3.2"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "~4.5.0",
@@ -28,5 +29,11 @@
         "postcss": "^7.0.39",
         "prettier": "^2.2.1",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+    },
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "vueFeatures": {
+            "interpolationAsNonHTML": true
+        }
     }
 }

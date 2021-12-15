@@ -1,24 +1,25 @@
-# vuechat
+# Introduction
+## Objectives
+This is a real-time chat app with Firebase's firestore. I made this app along with this tutorial of [codingthesmartway.com](https://codingthesmartway.com/vue-js-2-and-firebase/) with a week time frame to experience Vue framework. 
+I changed the enviroment setup to Vue3, Tailwind for faster load, instead of Vue2, Bootstrap, and JQuery.
 
-## Project setup
-```
-npm install
-```
+## Development
+- Vue
+- Tailwind
+- Firebase Cloud Database
+- Netlify
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Features
+- Login
+- Realtime Chat 
+- Connected with Fierbase
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Addtional Features Added by Me
+- Overall style change
+- Google Auth
+- Email login
+- Dark Mode 
+- Admin login (Work in the progress)
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Demo
+Coming soon

@@ -11,8 +11,8 @@
             </Message>
         </div>
     </div>
-    <div ref="bottom" class="mt-20 " />
-    <div class="fixed bottom-0  bg-gray-900 shadow-lg w-full">
+    <div ref="bottom" class="mt-20" />
+    <div class="fixed bottom-0 bg-gray-900 shadow-lg w-full">
         <div class="container max-w-xl">
             <form
                 class="w-full flex justify-between"
@@ -23,7 +23,7 @@
                 <input
                     v-model="message"
                     placeholder="Message"
-                    class="flex-grow m-7 p-4  mr-1 rounded-lg border-none bg-gray-700 text-white"
+                    class="flex-grow m-7 p-4 mr-1 rounded-lg border-none bg-gray-700 text-white"
                     required
                 />
                 <button type="submit">
@@ -33,8 +33,6 @@
         </div>
     </div>
 </template>
-
-
 
 <script>
 import { ref, watch, nextTick } from 'vue'

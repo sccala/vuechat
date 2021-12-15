@@ -1,6 +1,6 @@
 <template>
     <div class="my-2 w-full">
-        <span class="ml-11 text-xs text-gray-500 " v-if="!sender">{{
+        <span class="ml-11 text-xs text-gray-500" v-if="!sender">{{
             name
         }}</span>
         <div class="flex" :class="sender ? 'flex-row-reverse' : ''">

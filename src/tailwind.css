@@ -2,6 +2,24 @@
 
 @tailwind base;
 @tailwind components;
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-600;
+    @apply shadow-lg;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-300;
+    @apply rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-200;
+}
+
 @tailwind utilities;
 
 .dark {
@@ -25,22 +43,4 @@
 
 * {
     font-family: 'Source Sans 3', sans-serif;
-}
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-track {
-    @apply bg-gray-600;
-    @apply shadow-lg;
-}
-
-::-webkit-scrollbar-thumb {
-    @apply bg-gray-300;
-    @apply rounded-full;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-200;
 }
