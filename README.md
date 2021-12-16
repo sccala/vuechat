@@ -18,11 +18,11 @@ For faster load and scalability, the enviroment was changed to Vue3, and Tailwin
 ## Addtional Features Added by Me
 - Overall style change
 - Google Auth
-- Email login
-- Filter bad words
+- Email Account Register
+- Filter Bad Words
 - Dark Mode 
-- Admin login (Work in the progress)
-- Admin dashboad (Coming soon)
+- Admin Login (Coming soon)
+- Admin Dashboad (Coming soon)
 
 ## Demo
 Coming soon

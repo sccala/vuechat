@@ -1,14 +1,11 @@
-<template class="bg-primary h-screen mt-0">
-    <Nav />
-    <Chat />
+<template>
+    <Home />
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue'
-import Chat from '@/components/Chat.vue'
-
+import Home from './components/Home.vue'
 export default {
     name: 'App',
-    components: { Nav, Chat },
+    components: { Home },
 }
 </script>

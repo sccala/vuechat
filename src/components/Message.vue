@@ -13,7 +13,10 @@
             >
         </div>
         <div class="flex" :class="sender ? 'flex-row-reverse' : ''">
-            <Avatar class="mt-1" :src="photoUrl" />
+            <Avatar
+                class="mt-1"
+                :src="photoUrl || 'https://source.unsplash.com/random'"
+            />
             <div
                 class="mx-2 p-4 rounded-lg shadow-md w-3/4 text-primary"
                 :class="
@@ -36,7 +39,7 @@ export default {
         name: { type: String, default: '' },
         photoUrl: { type: String, default: '' },
         sender: { type: Boolean, default: false },
-        createdAt: { type: String, default: '' },
+        createdAt: { type: Number },
     },
 }
 </script>

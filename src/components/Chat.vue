@@ -1,5 +1,5 @@
 <template class="bg-primary">
-    <div class="container max-w-xl mt-20">
+    <div v-if="isLogin" class="container max-w-xl mt-20">
         <div class="mx-5">
             <Message
                 v-for="{
@@ -18,6 +18,9 @@
                 >{{ text }}
             </Message>
         </div>
+    </div>
+    <div v-else>
+        <Login />
     </div>
     <div ref="bottom" class="mt-20 mb-60" />
     <div class="fixed bottom-0 bg-tertiary shadow-lg w-full">
@@ -51,10 +54,11 @@
 <script>
 import { ref, watch, nextTick } from 'vue'
 import { useAuth, useChat } from '@/firebase'
+import Login from './Login.vue'
 import SendIcon from './SendIcon.vue'
 import Message from './Message.vue'
 export default {
-    components: { Message, SendIcon },
+    components: { Message, SendIcon, Login },
     setup() {
         const { user, isLogin } = useAuth()
         const { messages, sendMessage } = useChat()
