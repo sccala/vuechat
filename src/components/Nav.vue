@@ -13,13 +13,13 @@
                     Sign Out
                 </button>
             </div>
-            <button
+            <!-- <button
                 v-else
                 class="border text-gray-200 hover:text-gray-300 flex ml-auto px-4 py-2 mr-2 rounded-full"
                 @click="signIn"
             >
                 Sign in
-            </button>
+            </button> -->
             <ThemeButton />
         </div>
     </nav>

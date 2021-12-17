@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-28 grid justify-items-stretch">
+    <div class="grid justify-items-stretch pt-28 min-h-full">
         <div
             class="bg-gray-100 shadow-md rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-tertiary justify-self-center"
         >
@@ -78,25 +78,24 @@
                 </button>
                 <div class="text-sm font-medium text-secondary">
                     Not registered?
-                    <a href="#" class="text-accent hover:underline"
-                        >Register Account</a
+                    <router-link
+                        to="/register"
+                        class="text-accent hover:underline"
+                        >Register Account</router-link
                     >
                 </div>
             </form>
         </div>
     </div>
-    <Register />
 </template>
 
 <script>
 import { useAuth } from '@/firebase'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
-import Register from './Register.vue'
-
 export default {
     name: 'Login',
-    components: { Register },
+
     data() {
         return {
             email: '',

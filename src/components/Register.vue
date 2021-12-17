@@ -1,9 +1,9 @@
 <template>
-    <div class="mt-28 grid justify-items-stretch">
+    <div class="pt-28 grid justify-items-stretch">
         <div
             class="bg-gray-200 shadow-md rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-tertiary justify-self-center"
         >
-            <form class="space-y-6" @submit.prevent="pressed">
+            <form class="space-y-6" @submit.prevent="registerUser">
                 <h3 class="text-xl font-medium text-primary">
                     Register account
                 </h3>
@@ -86,18 +86,15 @@ export default {
         }
     },
     methods: {
-        pressed() {
+        registerUser() {
             firebase
                 .auth()
-                .createUserWithEmailAndPassword(
-                    this.email,
-                    this.password,
-                    this.userName
-                )
-                .then(() => {
-                    console.log('here')
-                    this.$router.replace({ name: 'secret' })
-                })
+                .createUserWithEmailAndPassword(this.email, this.password)
+
+                // .then(() => {
+                //     console.log('here')
+                //     this.$router.replace({ name: 'admin' })
+                // })
                 .catch((error) => (this.error = error))
         },
     },
