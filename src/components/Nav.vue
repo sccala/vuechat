@@ -10,7 +10,7 @@
                     class="text-gray-200 hover:text-white rounded-full px-4 py-1 border mx-2"
                     @click="signOut"
                 >
-                    Sign Out
+                    Log Out
                 </button>
             </div>
             <button
@@ -18,7 +18,7 @@
                 class="border text-gray-200 hover:text-gray-300 flex ml-auto px-4 py-1 mr-2 rounded-full"
                 @click="signIn"
             >
-                Sign in with Google
+                Log in with Google
             </button>
             <ThemeButton />
         </div>

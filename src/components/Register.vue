@@ -1,7 +1,7 @@
 <template>
-    <div class="grid justify-items-stretch pt-28">
+    <div class="pt-28 w-full">
         <div
-            class="bg-gray-200 shadow-md rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-tertiary justify-self-center"
+            class="bg-gray-200 shadow-md rounded-lg min-w-sm max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-tertiary mx-auto"
         >
             <form class="space-y-6" @submit.prevent="registerUser">
                 <h3 class="text-xl font-medium text-primary">

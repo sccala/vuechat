@@ -7,7 +7,7 @@
             class="switch-checkbox"
         />
 
-        <label for="checkbox" class="switch-label">
+        <label for="checkbox" class="switch-label cursor-pointer">
             {{ userTheme === 'dark' ? '🌙' : '☀️' }}
             <div
                 class="switch-toggle"
