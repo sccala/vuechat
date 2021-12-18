@@ -7,19 +7,19 @@
             <div v-if="isLogin" class="right-0 flex ml-auto">
                 <Avatar :src="user.photoURL" />
                 <button
-                    class="text-gray-200 hover:text-white rounded-full px-4 py-2 border mx-2"
+                    class="text-gray-200 hover:text-white rounded-full px-4 py-1 border mx-2"
                     @click="signOut"
                 >
                     Sign Out
                 </button>
             </div>
-            <!-- <button
+            <button
                 v-else
-                class="border text-gray-200 hover:text-gray-300 flex ml-auto px-4 py-2 mr-2 rounded-full"
+                class="border text-gray-200 hover:text-gray-300 flex ml-auto px-4 py-1 mr-2 rounded-full"
                 @click="signIn"
             >
-                Sign in
-            </button> -->
+                Sign in with Google
+            </button>
             <ThemeButton />
         </div>
     </nav>

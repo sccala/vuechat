@@ -21,8 +21,8 @@
     </div>
     <div v-else>
         <Login />
-        <Register />
     </div>
+
     <div ref="bottom" class="mb-60" />
     <div class="fixed bottom-0 bg-tertiary shadow-lg w-full">
         <div class="container max-w-xl">
@@ -57,10 +57,9 @@ import { ref, watch, nextTick } from 'vue'
 import { useAuth, useChat } from '@/firebase'
 import Login from './Login.vue'
 import SendIcon from './SendIcon.vue'
-import Register from './Register.vue'
 import Message from './Message.vue'
 export default {
-    components: { Message, SendIcon, Login, Register },
+    components: { Message, SendIcon, Login },
     setup() {
         const { user, isLogin } = useAuth()
         const { messages, sendMessage } = useChat()

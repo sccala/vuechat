@@ -1,11 +1,11 @@
 <template>
-    <div class="pt-28 grid justify-items-stretch">
+    <div class="grid justify-items-stretch pt-28">
         <div
             class="bg-gray-200 shadow-md rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-tertiary justify-self-center"
         >
             <form class="space-y-6" @submit.prevent="registerUser">
                 <h3 class="text-xl font-medium text-primary">
-                    Register account
+                    Register user account
                 </h3>
                 <div v-if="error" class="text-red-700">
                     {{ error.message }}
@@ -64,9 +64,17 @@
                 <button
                     type="submit"
                     class="w-full text-gray-100 bg-red-700 hover:bg-red-600 focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:hover:bg-red-700 mb-8"
+                    @click="signIn"
                 >
                     Register with Google
                 </button>
+                <div class="text-sm font-medium text-secondary">
+                    You have an account?
+
+                    <router-link to="/login" class="text-accent hover:underline"
+                        >Login</router-link
+                    >
+                </div>
             </form>
         </div>
     </div>
@@ -74,6 +82,7 @@
 
 <script>
 import * as firebase from 'firebase/app'
+import { useAuth } from '@/firebase'
 import 'firebase/auth'
 export default {
     name: 'Register',
@@ -91,12 +100,16 @@ export default {
                 .auth()
                 .createUserWithEmailAndPassword(this.email, this.password)
 
-                // .then(() => {
-                //     console.log('here')
-                //     this.$router.replace({ name: 'admin' })
-                // })
+                .then(() => {
+                    console.log('here')
+                    this.$router.replace({ name: 'admin' })
+                })
                 .catch((error) => (this.error = error))
         },
+    },
+    setup() {
+        const { user, isLogin, signOut, signIn } = useAuth()
+        return { user, isLogin, signOut, signIn }
     },
 }
 </script>

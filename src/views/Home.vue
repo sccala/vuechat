@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import Nav from './Nav'
-import Chat from './Chat'
+import Nav from '../components/Nav.vue'
+import Chat from '../components/Chat.vue'
 export default {
     name: 'Home',
     components: { Chat, Nav },

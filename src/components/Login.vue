@@ -1,11 +1,11 @@
 <template>
-    <div class="grid justify-items-stretch pt-28 min-h-full">
+    <div class="grid justify-items-stretch pt-28">
         <div
             class="bg-gray-100 shadow-md rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-tertiary justify-self-center"
         >
             <form class="space-y-6" @submit.prevent="pressed">
                 <h3 class="text-xl font-medium text-primary">
-                    Login in to start chatting
+                    Log in to start chatting
                 </h3>
                 <div v-if="error" class="text-red-700">{{ error.message }}</div>
                 <div>
@@ -66,6 +66,7 @@
                 <button
                     type="submit"
                     class="w-full text-gray-100 bg-accent hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:hover:bg-green-700"
+                    @click="pressed"
                 >
                     Login to your account
                 </button>
@@ -78,6 +79,7 @@
                 </button>
                 <div class="text-sm font-medium text-secondary">
                     Not registered?
+
                     <router-link
                         to="/register"
                         class="text-accent hover:underline"
@@ -95,7 +97,6 @@ import * as firebase from 'firebase/app'
 import 'firebase/auth'
 export default {
     name: 'Login',
-
     data() {
         return {
             email: '',
@@ -108,13 +109,13 @@ export default {
             firebase
                 .auth()
                 .signInWithEmailAndPassword(this.email, this.password)
-                .then((data) => {
-                    console.log(data)
-                    this.$router.replace({ name: 'secret' })
-                })
-                .catch((error) => {
-                    this.error = error
-                })
+            // .then((data) => {
+            //     console.log(data)
+            //     this.$router.replace({ name: 'secret' })
+            // })
+            this.$router.push('/').catch((error) => {
+                this.error = error
+            })
         },
     },
     setup() {

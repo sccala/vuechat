@@ -70,3 +70,40 @@ export function useChat() {
 
     return { messages, sendMessage }
 }
+
+//admin
+
+// const functions = require('firebase-functions')
+// const admin = require('firebase-admin')
+
+// admin.initializeApp({
+//     databaseURL: 'YOUR_DATABASE_URL',
+// })
+
+//add admin role
+// export function addAdminClaim() =
+//     .document('admin_users/{docID}')
+//     .onCreate((snap) => {
+//         const newAdminUser = snap.data()
+//         if (newAdminUser === undefined) {
+//             return
+//         }
+//         modifyAdmin(newAdminUser.uid, true)
+
+//     })
+
+//remove admin role
+// export function removeAdminClaim() {
+
+//     .document('admin_users/{docID}')
+//     .onDelete((snap) => {
+//         const deletedAdminUser = snap.data()
+//         if (deletedAdminUser === undefined) {
+//             return
+//         }
+//         modifyAdmin(deletedAdminUser.uid, false)
+
+//     })
+// const modifyAdmin = (uid, isAdmin) => {
+//     admin.auth().setCustomUserClaims(uid, { admin: isAdmin }).then()}
+// }
